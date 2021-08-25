@@ -103,7 +103,7 @@ Player X | Please enter your move number: 9
 ========================================
 ```
 
-Popis programu
+Popis kódu
 ---
 
 Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Než spustíme hru, určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
