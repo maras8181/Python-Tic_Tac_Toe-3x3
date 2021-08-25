@@ -1,9 +1,6 @@
 Engeto: Project 2
 ===
 
-Popis programu
----
-
 Popis zadání
 ---
 Cílem této hry je umístit 3 hrací kameny (křížek X nebo kolečko O), a to horizontálně, vertikálně nebo diagonálně. Jde o hru pro dva hráče (příp. počítač)
@@ -105,3 +102,13 @@ Player X | Please enter your move number: 9
         Player X won. Game Over.        
 ========================================
 ```
+
+Popis programu
+---
+
+Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Než spustíme hru, určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jede z hráčů vyhrál.
+
+ř. 72 - Hra začíná.
+Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní uživatele pro nesprávný vstup v případě, že vstup není roven libovolnému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. v případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní.
+Následně voláme funkci ```check_winner()```, která nám vrací hodnotu ```True```, nebo ```False``` na základě toho, zda se kámen jednoho z hráčů nachází 3x vedle sebe ať už horizontálně, vertikálně, nebo diagonálně. V průběhu hry přičítáme do proměnné ```move``` číslo 1 pokaždé, kdy hráč zadá správný vstup. na základě tohoto čísla je pak určeno, který hráč hraje dle dělitelnosti číslem 2.
+V případě, že funkce ```check_winner()``` vrátila hodnotu ```True```, nebo proměnná ```move``` je rovna číslu 9, pak program vypíše zprávu a končí.
