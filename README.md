@@ -106,9 +106,9 @@ Player X | Please enter your move number: 9
 Popis kódu
 ---
 
-Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Než spustíme hru, určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
+Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Dále pak je kód rozdělen do 5 funkcí, které budeme průběžně za běhu programu volat. Dříve než spustíme hru ve funkci ```main()```, nastavíme si stav hry na hodnotu ```False``` a určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
 
 ř. 72 - Hra začíná.
-Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní uživatele pro nesprávný vstup v případě, že vstup není roven libovolnému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. v případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní.
-Následně voláme funkci ```check_winner()```, která nám vrací hodnotu ```True```, nebo ```False``` na základě toho, zda se kámen jednoho z hráčů nachází 3x vedle sebe ať už horizontálně, vertikálně, nebo diagonálně. V průběhu hry přičítáme do proměnné ```move``` číslo 1 pokaždé, kdy hráč zadá správný vstup. na základě tohoto čísla je pak určeno, který hráč hraje dle dělitelnosti číslem 2.
+Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní hráče pro nesprávný vstup v případě, že vstup není roven libovolnému celému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. V případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní. Celý tento blok je řízen pomocí podmínky ```if``` .. ```elif``` .. ```else```. na ř. 68 jsme si mohli všimnou proměnné ```move```, která má hodnotu 0. Postupně se do této proměnné bude přípočítávat číslo 1 podle správně zadaných vstupů obou hráčů. Na základě zbytku dělení tohoto čísla číslem 2 bude rozhodnuto, zda hraje hráč X nebo O.
+Následně voláme funkci ```check_winner()```, která nám vrací hodnotu ```True```, nebo ```False``` na základě toho, zda se kámen jednoho z hráčů nachází 3x vedle sebe ať už horizontálně, vertikálně, nebo diagonálně.
 V případě, že funkce ```check_winner()``` vrátila hodnotu ```True```, nebo proměnná ```move``` je rovna číslu 9, pak program vypíše zprávu a končí.
