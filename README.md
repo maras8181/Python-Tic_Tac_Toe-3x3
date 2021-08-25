@@ -106,7 +106,7 @@ Player X | Please enter your move number: 9
 Popis programu
 ---
 
-Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Než spustíme hru, určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jede z hráčů vyhrál.
+Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Než spustíme hru, určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
 
 ř. 72 - Hra začíná.
 Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní uživatele pro nesprávný vstup v případě, že vstup není roven libovolnému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. v případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní.
