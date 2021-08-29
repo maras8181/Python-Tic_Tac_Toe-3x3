@@ -1,7 +1,7 @@
 Engeto: Project 2
 ===
 
-druhý program na online python akademii od Engeta. Tento program je psán na základě zkušeností nabraných za 2 měsíce studia python Akademie. Psaní kódu trvalo 25 hodin.
+Druhý program na online python akademii od Engeta. Tento program je psán na základě zkušeností nabraných za 2 měsíce studia python Akademie. Psaní kódu trvalo 25 hodin.
 
 Popis zadání
 ---
@@ -108,9 +108,9 @@ Player X | Please enter your move number: 9
 Popis kódu
 ---
 
-Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Dále pak je kód rozdělen do 5 funkcí, které budeme průběžně za běhu programu volat. Dříve než spustíme hru ve funkci ```main()```, nastavíme si stav hry na hodnotu ```False``` a určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
+Celý kód nám určuje řídící funkce ```main()```, která na začátku pozdraví uřivatele, vypíše pravidla hry a vytiskne hrací plochu zavoláním funkce ```game_area()```. Dále pak je kód rozdělen do 5 funkcí, které budeme průběžně za běhu programu volat. Dříve, než spustíme hru ve funkci ```main()```, nastavíme si stav hry na hodnotu ```False``` a určíme si pozice, které musí být dle pravidel hry obsazené tak, aby jeden z hráčů vyhrál.
 
 ř. 72 - Hra začíná.
-Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní hráče pro nesprávný vstup v případě, že vstup není roven libovolnému celému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. V případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní. Celý tento blok je řízen pomocí podmínky ```if``` .. ```elif``` .. ```else```. Na ř. 68 jsme si mohli všimnou proměnné ```move```, která má hodnotu 0. Postupně se do této proměnné bude přípočítávat číslo 1 podle správně zadaných vstupů obou hráčů. Na základě zbytku dělení tohoto čísla číslem 2 bude rozhodnuto, zda hraje hráč X nebo O.
+Vyzveme prvního hráče, aby zadal číslo pozice, kam chce umístit svůj kámen. Program upozorní hráče pro nesprávný vstup v případě, že vstup není roven libovolnému celému číslu mezi 1-9. Pokud hráč není upozorněn, pak program kontroluje obsazenost zadané pozice. V případě, že na pozici už nějaký kámen leží, program hráče rovněž upozorní. Celý tento blok je řízen za pomocí podmínkového bloku ```if``` .. ```elif``` .. ```else```. Na ř. 68 jsme si mohli všimnout proměnné ```move```, která má hodnotu 0. Postupně se do této proměnné bude přípočítávat číslo 1 podle správně zadaných vstupů obou hráčů. Na základě zbytku po dělení tohoto čísla číslem 2 bude rozhodnuto, zda hraje hráč X nebo O.
 Následně voláme funkci ```check_winner()```, která nám vrací hodnotu ```True```, nebo ```False``` na základě toho, zda se kámen jednoho z hráčů nachází 3x vedle sebe ať už horizontálně, vertikálně, nebo diagonálně.
 V případě, že funkce ```check_winner()``` vrátila hodnotu ```True```, nebo proměnná ```move``` je rovna číslu 9, pak program vypíše zprávu a končí.
